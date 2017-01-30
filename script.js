@@ -42,9 +42,13 @@ var names = ["Yaakov", "John", "Jen", "Jason", "Paul", "Frank", "Larry", "Paula"
 // using the 'speak' method or either helloSpeaker's or byeSpeaker's
 // 'speak' method.
 // See Lecture 50, part 1
+
+console.log("Following, we are saying bye to Each name")
 for (var index in names) {
   var name = names[index];
-  //byeSpeaker.speak(name);
+  byeSpeaker.speak(name, index);
+};
+
 
 
   // STEP 11:
@@ -61,9 +65,12 @@ for (var index in names) {
   // 'j'. If the same, call byeSpeaker's 'speak' method with the current name
   // in the loop. Otherwise, call helloSpeaker's 'speak' method with the current
   // name in the loop.
+  console.log("Following, we are saying bye to  name start with [J]")
+  for (var index in names) {
+  var name = names[index];
   if (name.charAt(0).toLowerCase()=="j") {
-    byeSpeaker.speak(name);
+    byeSpeaker.speak(name,index);
   } else {
-    helloSpeaker.speak(name);
+    helloSpeaker.speak(name,index);
   }
 }
